@@ -1,0 +1,27 @@
+{
+  "name": "my-api",
+  "version": "1.0.0",
+  "description": "bootstrap boilerplate for MYSQL API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdsandahl/my-api-bootstrap.git"
+  },
+  "author": "Justin Sandahl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdsandahl/my-api-bootstrap/issues"
+  },
+  "homepage": "https://github.com/jdsandahl/my-api-bootstrap#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^4.19.1",
+    "eslint-config-mcr-codes": "^1.3.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.9.1"
+  }
+}
