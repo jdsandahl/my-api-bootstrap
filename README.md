@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [Setting up a project](#setting-up-a-project)
+1. [Setting up a new project](#setting-up-a-new-project)
     - [Clone the repo](#clone-the-repo)
     - [Create local environment files](#create-local-environment-files)
     - [Set up your database](#set-up-your-database)
@@ -15,11 +15,11 @@
     - [Dependency documentation](#dependency-documentation)
     - [Dev dependency documentation](#dev-dependency-documentation)
 
-## Setting up a project
+## Setting up a new project
 
 ### Clone the repo
 
-Create a project folder and clone down the repo into your folder using:
+Create a project folder on your desktop and clone down the repo into your folder using:
 
 ```
 git@github.com:jdsandahl/my-api-bootstrap.git
@@ -31,9 +31,11 @@ Install the minimum dependencies:
 npm install
 ```
 
+
+
 ### Create local environment files
 
-In the root folder of the project (where this readme is saved) create two files named .env and .env.test 
+In the root folder of the project (where this readme is saved) create two files named **.env** and **.env.test** 
 
 These files will need the follwing code inside:
 
@@ -45,19 +47,19 @@ These files will need the follwing code inside:
     DB_PORT=3306
  ```
 
- - Your DB_PASSWORD should be the same for both files. 
+ - Your **DB_PASSWORD** should be the same for both files. 
 
- - Your DB_NAME in .env should be your real database and in .env.test this should be the name of your test database.
+ - Your **DB_NAME** in **.env** should be your real database and in **.env.test** this should be the name of your test database.
 
- - You do not need place these between "<" ">", this is just for highlighting.
+ - You do not need place these between "< >", this is just for highlighting.
 
- - There is a file named .env.example that can be used for reference when setting up, you may delete this file once it is no longer needed.
+ - There is a file named **.env.example** that can be used for reference when setting up, you may delete this file once it is no longer needed for reference.
 
  ### Set up your database
 
 This project requires a running MySQL database. 
 
-This can be set up with Docker with a MySQL image by running: (Make sure to change the name and password!)
+This can be set up with Docker with a MySQL image by running: (**Make sure to change the name and password!**)
 
  ```
  docker run -d -p 3306:3306 --name my_api_mysql -e MYSQL_ROOT_PASSWORD=<YOUR_PASSWORD> mysql
@@ -81,7 +83,7 @@ You will be prompted to enter your password. After your password has been correc
 CREATE DATABASE YOUR_APP_NAME
 ```
 
-You can then exit MySQL using ctrl+C and then again to exit the Docker container. 
+You can then exit MySQL using **ctrl+c** and then again to exit the Docker container. 
 
 If you've used the setup above your container should continue to run in the background while still freeing up your terminal. 
 
@@ -105,13 +107,13 @@ Docker requires a Linux kernel in order to run. This can be emulated on Windows 
  
 ### Docker tips:
 
-If you want to stop your Docker container session type:
+If you want to **stop** your Docker container session type:
 
 ```
 docker stop my_api_mysql
 ```
 
-To restart the session, you can type:
+To **restart** the session, you can type:
 
 ```
 docker start my_api_mysql
