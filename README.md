@@ -134,9 +134,9 @@ docker images
 
 ## Recommended project file and folder structure
 
-Upon initial set-up, you will not see all of the files and folders below.
+Upon initial set-up, you will not see all of the files and folders outlined below.
 
-Some of these files are created after the bootstrap has been cloned and downloaded using the steps outlined above, others will create based on your project's actual needs. 
+Some of these files will be created after the bootstrap has been cloned and downloaded using the steps outlined above, others will need to be created based on your project's actual needs. 
 
 Below is a hypothetical file structure to be used as guideline when putting together a new project. 
 
