@@ -16,7 +16,7 @@
 
 ## Setting up a project
 
-### Step 1: Clone the repo
+### Clone the repo
 
 Create a project folder and clone down the repo into your folder using:
 
@@ -30,7 +30,7 @@ Install the minimum dependencies:
 npm install
 ```
 
-### Step 2: Create local environment files
+### Create local environment files
 
 In the root folder of the project (where this readme is saved) create two files named .env and .env.test 
 
@@ -52,7 +52,7 @@ These files will need the follwing code inside:
 
  - There is a file named .env.example that can be used for reference when setting up, you may delete this file once it is no longer needed.
 
- ### Step 3: Set up your database
+ ### Set up your database
 
 This project requires a running MySQL database. 
 
@@ -61,7 +61,7 @@ This can be set up with Docker with a MySQL image by running: (Make sure to chan
  ```
  docker run -d -p 3306:3306 --name my_api_mysql -e MYSQL_ROOT_PASSWORD=<YOUR_PASSWORD> mysql
  ```
-- if you don't have Docker or the image see further down 'Installing Docker' for instructions.
+- if you don't have Docker or the image see further down ['Installing Docker'](#installing-docker) for instructions.
 
 Once this is running, you will need to create a database this should be the name used for DB_NAME in your .env file:
 
