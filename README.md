@@ -1,18 +1,18 @@
 # API Bootstrap utilizing MySQL and Express.js
-<details>
-    <summary> Table of Contents </summary>
-    1. Setting up a project
-        - Clone the repo
-        - Create the local environment files
-        - Set up your database
-    2. Installing Docker
-        - Ubuntu
-        _ Windows and Mac
-        - Docker tips
-    3. Recommended project file and folder structure 
-    4. Extra resources
-        - Dependency docs
-</details>
+
+## Table of Contents
+
+1. [Setting up a project]
+    - [Clone the repo]
+    - [Create the local environment files]
+    - [Set up your database]
+2. [Installing Docker]
+    - [Ubuntu]
+    - [Windows and Mac]
+    - [Docker tips]
+3. [Recommended project file and folder structure] 
+4. [Extra resources]
+     - [Dependency docs]
 
 ## Setting up a project
 
