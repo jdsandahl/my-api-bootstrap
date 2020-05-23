@@ -127,19 +127,20 @@ docker images
     |--- package.json
     |--- README.md
     |--- test-setup.js
-
+    
     |___ tests/
     |___ node_modules/
     |___ scripts/
         |--- create-database.js
-        |--- drop-database.js
+        |___ drop-database.js
+
     |___ src/
         |--- app.js
         |___ controllers/
         |___ lib/
         |___ middleware/
         |___ models/
-            |--- index.js  
+            |___ index.js 
         |___ routes/
  ```       
 
