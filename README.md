@@ -143,7 +143,7 @@ docker images
     |--- README.md
     |--- test-setup.js
 
-    |___ tests/
+    |___ __tests__/
     |___ node_modules/
     |___ scripts/
         |--- create-database.js
