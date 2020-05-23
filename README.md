@@ -1,4 +1,18 @@
 # API Bootstrap utilizing MySQL and Express.js
+<details>
+    <summary> Table of Contents </summary>
+    1. Setting up a project
+        - Clone the repo
+        - Create the local environment files
+        - Set up your database
+    2. Installing Docker
+        - Ubuntu
+        _ Windows and Mac
+        - Docker tips
+    3. Recommended project file and folder structure 
+    4. Extra resources
+        - Dependency docs
+</details>
 
 ## Setting up a project
 
@@ -115,7 +129,7 @@ To view a list of your downloaded docker images you can run:
 docker images 
 ```
 
-## Recommended file structure & folder names
+## Recommended project file and folder structure
 ```
 |___ ROOT/
     |--- .env
@@ -127,7 +141,7 @@ docker images
     |--- package.json
     |--- README.md
     |--- test-setup.js
-    
+
     |___ tests/
     |___ node_modules/
     |___ scripts/
