@@ -4,7 +4,7 @@
 
 1. [Setting up a project](#setting-up-a-project)
     - [Clone the repo](#clone-the-repo)
-    - [Create the local environment files](#create-the-local-environment-files)
+    - [Create local environment files](#create-local-environment-files)
     - [Set up your database](#set-up-your-database)
 2. [Installing Docker](#installing-docker)
     - [Ubuntu](#ubuntu)
