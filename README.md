@@ -12,7 +12,8 @@
     - [Docker tips](#docker-tips)
 3. [Recommended project file and folder structure](#recommended-project-file-and-folder-structure)
 4. [Extra resources](#extra-resources)
-     - [Dependency docs](#dependecy-docs)
+    - [Dependency documentation](#dependency-documentation)
+    - [Dev dependency documentation](#dev-dependency-documentation)
 
 ## Setting up a project
 
@@ -160,19 +161,18 @@ docker images
 
 ## Extra resources
 
-### Depedency docs
+### Dependency documentation
 
-- [Sequelize documentation and API reference](https://sequelize.org/master/class/lib/model.js~Model.html)
-
+- [Express.js](https://expressjs.com/en/4x/api.html)
+- [Sequelize documentation and API reference](https://sequelize.org/master/index.html)
+- [mysql2](https://www.npmjs.com/package/mysql2)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 
+### Dev dependency documentation
+
 - [nodemon](https://www.npmjs.com/package/nodemon)
-
 - [mocha](https://mochajs.org/)
-
 - [chai](https://www.npmjs.com/package/chai)
-
 - [SuperTest](https://www.npmjs.com/package/supertest)
-
 - [eslint-config-mcr-codes](https://www.npmjs.com/package/eslint-config-mcr-codes?activeTab=readme)
 
