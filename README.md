@@ -2,17 +2,17 @@
 
 ## Table of Contents
 
-1. [Setting up a project]
-    - [Clone the repo]
-    - [Create the local environment files]
-    - [Set up your database]
-2. [Installing Docker]
-    - [Ubuntu]
-    - [Windows and Mac]
-    - [Docker tips]
-3. [Recommended project file and folder structure] 
-4. [Extra resources]
-     - [Dependency docs]
+1. [Setting up a project](#setting-up-a-project)
+    - [Clone the repo](#clone-the-repo)
+    - [Create the local environment files](#create-the-local-environment-files)
+    - [Set up your database](#set-up-your-database)
+2. [Installing Docker](#installing-docker)
+    - [Ubuntu](#ubuntu)
+    - [Windows and Mac](#windows-and-mac)
+    - [Docker tips](#docker-tips)
+3. [Recommended project file and folder structure](#recommended-project-file-and-folder-structure)
+4. [Extra resources](#extra-resources)
+     - [Dependency docs](#dependecy-docs)
 
 ## Setting up a project
 
