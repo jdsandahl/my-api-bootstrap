@@ -116,6 +116,7 @@ docker images
 ```
 
 ## Recommended file structure & folder names
+```
 |___ ROOT/
     |--- .env
     |--- .env.test
@@ -139,6 +140,7 @@ docker images
         |___ models/
             |--- index.js
         |___ routes/
+ ```       
 
 ## Extra resources
 
