@@ -6,14 +6,17 @@
     - [Clone the repo](#clone-the-repo)
     - [Create local environment files](#create-local-environment-files)
     - [Set up your database](#set-up-your-database)
-2. [Installing Docker](#installing-docker)
+2. [Running the project](#running-the-project)
+3. [Testing environment](#testing-environment)    
+4. [Installing Docker](#installing-docker)
     - [Ubuntu](#ubuntu)
     - [Windows and Mac](#windows-and-mac)
     - [Docker tips](#docker-tips)
-3. [Recommended project file and folder structure](#recommended-project-file-and-folder-structure)
-4. [Extra resources](#extra-resources)
+5. [Recommended project file and folder structure](#recommended-project-file-and-folder-structure)
+6. [Extra resources](#extra-resources)
     - [Dependency documentation](#dependency-documentation)
     - [Dev dependency documentation](#dev-dependency-documentation)
+    - [Misc.](#misc.)
 
 ## Setting up a new project
 
@@ -22,7 +25,9 @@
 Create a project folder on your desktop and clone down the repo into your folder using:
 
 ```
-git@github.com:jdsandahl/my-api-bootstrap.git
+git@github.com:jdsandahl/my-api-bootstrap.git your-project-folder-name
+
+cd your-project-folder-name
 ```
 
 Install the minimum dependencies:
@@ -30,8 +35,6 @@ Install the minimum dependencies:
 ```
 npm install
 ```
-
-
 
 ### Create local environment files
 
@@ -90,6 +93,37 @@ You can then exit MySQL using **ctrl+c** and then again to exit the Docker conta
 If you've used the setup above your container should continue to run in the background while still freeing up your terminal. 
 
 **You're now ready to begin your project!**
+
+## Running the project
+
+After the initial setup you should be able to start a local server instance of the project using the following terminal command:
+
+```
+npm start
+```
+
+To end the localhost: from running you can use **ctrl+c** in the terminal to stop the server
+
+## Testing environment
+
+This bootstrap uses Mocha and SuperTest to perform unit tests, it is also recommended to use [Postman](https://www.postman.com/) for further end to end tests on the live database. 
+
+Running the following command will start the tests:
+
+```
+npm test
+```
+
+When fist setting up the project, you should see the below error. 
+```
+Error: No test files found: "__tests__/**/*.test.js"
+npm ERR! Test failed.  See above for more details.
+```
+
+This shows that the test environment is setup correctly, but is not running because you've not created any test files.
+
+**Time to create your unit tests**
+
 
 ## Installing Docker
 
@@ -187,3 +221,7 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 - [SuperTest](https://www.npmjs.com/package/supertest)
 - [eslint-config-mcr-codes](https://www.npmjs.com/package/eslint-config-mcr-codes?activeTab=readme)
 
+### Misc.
+
+- [Postman documentation](https://learning.postman.com/docs/postman/launching-postman/introduction/)
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
