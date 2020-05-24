@@ -7,7 +7,7 @@ This project is a boiler plate environment for creating a Node.js/Express API th
 1. [Setting up a new project](#setting-up-a-new-project)
     - [Clone the repo](#clone-the-repo)
     - [Create local environment files](#create-local-environment-files)
-    - [Set up your database](#set-up-your-database)
+    - [Set up the database](#set-up-the-database)
 2. [Running the project](#running-the-project)
 3. [Testing environment](#testing-environment)    
 4. [Installing Docker](#installing-docker)
@@ -60,7 +60,7 @@ These files will need the follwing code inside:
 
  - There is a file named **.env.example** that can be used for reference when setting up, you may delete this file once it is no longer needed for reference.
 
- ### Set up your database
+ ### Set up the database
 
 This project requires a running MySQL database. 
 
