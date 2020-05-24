@@ -29,13 +29,14 @@ git@github.com:jdsandahl/my-api-bootstrap.git your-project-folder-name
 
 cd your-project-folder-name
 ```
-*[back to top](#table-of-contents)*
 
 Install the minimum dependencies:
 
 ```
 npm install
 ```
+
+*[back to top](#table-of-contents)*
 
 ### Create local environment files
 
@@ -58,6 +59,8 @@ These files will need the follwing code inside:
  - You do not need place these between "< >", this is just for highlighting.
 
  - There is a file named **.env.example** that can be used for reference when setting up, you may delete this file once it is no longer needed for reference.
+
+*[back to top](#table-of-contents)*
 
  ### Set up your database
 
@@ -95,6 +98,8 @@ If you've used the setup above your container should continue to run in the back
 
 **You're now ready to begin your project!**
 
+*[back to top](#table-of-contents)*
+
 ## Running the project
 
 After the initial setup you should be able to start a local server instance of the project using the following terminal command:
@@ -104,6 +109,8 @@ npm start
 ```
 
 To end the localhost: from running you can use **ctrl+c** in the terminal to stop the server
+
+*[back to top](#table-of-contents)*
 
 ## Testing environment
 
@@ -125,6 +132,7 @@ This shows that the test environment is setup correctly, but is not running beca
 
 **Time to create your unit tests**
 
+*[back to top](#table-of-contents)*
 
 ## Installing Docker
 
@@ -169,6 +177,8 @@ To view a list of your downloaded docker images you can run:
 docker images 
 ```
 
+*[back to top](#table-of-contents)*
+
 ## Recommended project file and folder structure
 
 Upon initial set-up, you will not see all of the files and folders outlined below.
@@ -205,6 +215,8 @@ Below is a hypothetical file structure to be used as guideline when putting toge
         |___ routes/
  ```       
 
+*[back to top](#table-of-contents)*
+
 ## Extra resources
 
 ### Dependency documentation
@@ -226,3 +238,5 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 
 - [Postman documentation](https://learning.postman.com/docs/postman/launching-postman/introduction/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+
+*[back to top](#table-of-contents)*
