@@ -120,7 +120,7 @@ Running the following command will start the tests:
 npm test
 ```
 
-When fist setting up the project, you should see the below error. 
+When first setting up the project, you should see the below error. 
 ```
 Error: No test files found: "__tests__/**/*.test.js"
 npm ERR! Test failed.  See above for more details.
