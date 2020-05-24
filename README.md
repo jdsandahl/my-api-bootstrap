@@ -16,7 +16,7 @@
 6. [Extra resources](#extra-resources)
     - [Dependency documentation](#dependency-documentation)
     - [Dev dependency documentation](#dev-dependency-documentation)
-    - [Misc.](#misc.)
+    - [Miscellaneous](#miscellaneous)
 
 ## Setting up a new project
 
@@ -62,7 +62,7 @@ These files will need the follwing code inside:
 
 This project requires a running MySQL database. 
 
-This can be set up with Docker with a MySQL image by running: (**Make sure to the password to match your DB_PASSWORD! You can also name the container more appropriately**)
+This can be set up with Docker with a MySQL image by running: (**Make sure the password matches your DB_PASSWORD! You can also appropriately name the container more specific to your project**)
 
  ```
  docker run -d -p 3306:3306 --name my_api_mysql -e MYSQL_ROOT_PASSWORD=<YOUR_PASSWORD> mysql
@@ -221,7 +221,7 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 - [SuperTest](https://www.npmjs.com/package/supertest)
 - [eslint-config-mcr-codes](https://www.npmjs.com/package/eslint-config-mcr-codes?activeTab=readme)
 
-### Misc.
+### Miscellaneous
 
 - [Postman documentation](https://learning.postman.com/docs/postman/launching-postman/introduction/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
