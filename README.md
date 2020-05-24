@@ -234,6 +234,7 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 
 ### Miscellaneous
 
+- [Docker documentation](https://docs.docker.com/)
 - [Postman documentation](https://learning.postman.com/docs/postman/launching-postman/introduction/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
