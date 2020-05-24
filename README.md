@@ -130,6 +130,18 @@ This shows that the test environment is setup correctly, but is not running beca
 
 **Time to start creating some unit tests!**
 
+When begining to add tests to the project you may need to add the following extra flag to the test script in the **package.json** file to make sure your test databases are set up when running the test:
+
+```
+--file ./__tests__/test-setup.js
+```
+
+The full test script in package.json should now look like the following:
+
+```
+   "test": "NODE_ENV=test mocha __tests__/**/*.test.js --exit --recursive --timeout 6000 --file ./__tests__/test-setup.js",
+```
+
 *[return to table of contents](#table-of-contents)*
 
 ## Installing Docker
@@ -195,9 +207,9 @@ Below is a hypothetical file structure to be used as guideline when putting toge
     |--- package-lock.json
     |--- package.json
     |--- README.md
-    |--- test-setup.js
 
     |___ __tests__/
+        |__ test-setup.js
     |___ node_modules/
     |___ scripts/
         |--- create-database.js
