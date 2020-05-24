@@ -92,7 +92,7 @@ CREATE DATABASE YOUR_APP_NAME
 
 You can then exit MySQL using **ctrl+c** and then again to exit the Docker container. 
 
-If you've used the setup above your container should continue to run in the background while still freeing up your terminal. 
+If you've used the setup above, your container should continue to run in the background while still freeing up your terminal. 
 
 **You're now ready to begin your project!**
 
@@ -128,7 +128,7 @@ npm ERR! Test failed.  See above for more details.
 
 This shows that the test environment is setup correctly, but is not running because you've not created any test files.
 
-**Time to create your unit tests**
+**Time to start creating some unit tests!**
 
 *[return to table of contents](#table-of-contents)*
 
@@ -161,7 +161,7 @@ To **restart** the session, you can type:
 ```
 docker start my_api_mysql
 ```
-- you can can also use the CONTAINER ID instead of the database name, this can be found using the process below.
+- you can can also use the CONTAINER ID instead of the container name, this ID can be found using the process below.
 
 To see a list of your running containers, all containers (running and stopped):
 ```
