@@ -59,14 +59,15 @@ These files will need the follwing code inside:
 
 This project requires a running MySQL database. 
 
-This can be set up with Docker with a MySQL image by running: (**Make sure to change the name and password!**)
+This can be set up with Docker with a MySQL image by running: (**Make sure to the password to match your DB_PASSWORD! You can also name the container more appropriately**)
 
  ```
  docker run -d -p 3306:3306 --name my_api_mysql -e MYSQL_ROOT_PASSWORD=<YOUR_PASSWORD> mysql
  ```
 - if you don't have Docker or the image see further down ['Installing Docker'](#installing-docker) for instructions.
 
-Once this is running, you will need to create a database this should be the name used for DB_NAME in your .env file:
+Once this is running, you can manually create a database using the steps below, this should use the same name that has been entered used for DB_NAME in your .env file:
+*Note: the below steps shouldn't be required if using nodemon and the included scripts, as these should create the database automatically from your .env files. The steps below are provided should there be an issue*
 
 ```
  docker exec -it YOUR_APP_NAME bash
@@ -87,7 +88,7 @@ You can then exit MySQL using **ctrl+c** and then again to exit the Docker conta
 
 If you've used the setup above your container should continue to run in the background while still freeing up your terminal. 
 
-You're now ready to begin your project!
+**You're now ready to begin your project!**
 
 ## Installing Docker
 
