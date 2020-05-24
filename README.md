@@ -90,7 +90,7 @@ You will be prompted to enter your password. After your password has been correc
 CREATE DATABASE YOUR_APP_NAME
 ```
 
-You can then exit MySQL using **ctrl+c** and then again to exit the Docker container. 
+You can then exit MySQL by typing `exit` and pressing **enter** and then again to exit the Docker container. 
 
 If you've used the setup above, your container should continue to run in the background while still freeing up your terminal. 
 
