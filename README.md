@@ -1,6 +1,6 @@
 # API Bootstrap utilizing MySQL and Express.js
 
-This project is a boiler plate environment for creating a Node.js/Express API that uses MySQL as a database. Also included is the testing packages Mocha and Supertest, it's recommended to install [Postman](https://www.postman.com/) for further end-to-end testing on live endpoints.  
+This project is a boilerplate for creating a Node.js/Express API environment that uses MySQL as a database. Also included is the testing packages Mocha and Supertest, it's recommended to install [Postman](https://www.postman.com/) for further end-to-end testing on live endpoints.  
 
 ## Table of Contents
 
