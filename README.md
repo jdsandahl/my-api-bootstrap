@@ -67,6 +67,7 @@ This can be set up with Docker with a MySQL image by running: (**Make sure to th
 - if you don't have Docker or the image see further down ['Installing Docker'](#installing-docker) for instructions.
 
 Once this is running, you can manually create a database using the steps below, this should use the same name that has been entered used for DB_NAME in your .env file:
+
 *Note: the below steps shouldn't be required if using nodemon and the included scripts, as these should create the database automatically from your .env files. The steps below are provided should there be an issue*
 
 ```
