@@ -29,6 +29,8 @@ git@github.com:jdsandahl/my-api-bootstrap.git your-project-folder-name
 
 cd your-project-folder-name
 ```
+|*[table of contents](#table-of-contents)*|
+|----------------------------------------:|
 
 Install the minimum dependencies:
 
