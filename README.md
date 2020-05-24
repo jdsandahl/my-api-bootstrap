@@ -36,8 +36,6 @@ Install the minimum dependencies:
 npm install
 ```
 
-*[return to table of contents](#table-of-contents)*
-
 ### Create local environment files
 
 In the root folder of the project (where this readme is saved) create two files named **.env** and **.env.test** 
@@ -59,8 +57,6 @@ These files will need the follwing code inside:
  - You do not need place these between "< >", this is just for highlighting.
 
  - There is a file named **.env.example** that can be used for reference when setting up, you may delete this file once it is no longer needed for reference.
-
-*[return to table of contents](#table-of-contents)*
 
  ### Set up your database
 
