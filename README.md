@@ -27,7 +27,7 @@ This project is a boilerplate for creating a Node.js/Express API environment tha
 Create a project folder on your desktop and clone down the repo into your folder using:
 
 ```
-git@github.com:jdsandahl/my-api-bootstrap.git your-project-folder-name
+git clone git@github.com:jdsandahl/my-api-bootstrap.git your-project-folder-name
 
 cd your-project-folder-name
 ```
