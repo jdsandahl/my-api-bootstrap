@@ -15,9 +15,9 @@ This project is a boilerplate for creating a Node.js/Express API environment tha
     - [Windows and Mac](#windows-and-mac)
     - [Docker tips](#docker-tips)
 5. [Recommended project file and folder structure](#recommended-project-file-and-folder-structure)
-6. [Deploy using Heroku](#deploy-using-heroku)
+6. [Deploying using Heroku](#deploying-using-heroku)
     - [Installing the Heroku CLI](#installing-the-heroku-cli)
-    - [Loggin in](#logging-in)
+    - [Logging in](#logging-in)
     - [Creating the app](#creating-the-app)
     - [Adding a database](#adding-a-database)
     - [Modifying the boilerplate and scripts](#modifying-the-boilerplate-and-scripts)
@@ -295,9 +295,9 @@ In the package.json file change the scripts to the following:
     "test": "NODE_ENV=test nyc --reporter=lcov mocha __tests__/**/*.js --exit --recursive --timeout 60000 --file ./test-setup.js",
     "posttest": "node scripts/drop-database.js"
 ```
-*The "dev" script is the original script, this is left to be swapable with "start" should it be needed, but the important thing is that the "dev" script now runs node index.js*  
+*The "dev" script is the original script, this is left to be swapable with "start" should it be needed, but I can also just be removed. The important part is **"start": "node index.js",***  
 
-In /src/app.js change APP_PORT to the below:
+In **/src/app.js** change APP_PORT to the below:
 ```
 const APP_PORT = process.env.PORT || 3000;
 ```
