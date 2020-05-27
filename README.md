@@ -15,7 +15,7 @@ This project is a boilerplate for creating a Node.js/Express API environment tha
     - [Windows and Mac](#windows-and-mac)
     - [Docker tips](#docker-tips)
 5. [Recommended project file and folder structure](#recommended-project-file-and-folder-structure)
-6. [Optional: Deploy to the cloud using Heroku](#optional:-deploy-to-the-cloud-using-heroku)
+6. [Deploying to the cloud using Heroku](#deploying-to-the-cloud-using-heroku)
     - [Installing the Heroku CLI](#installing-the-heroku-cli)
     - [Logging in](#logging-in)
     - [Creating the app](#creating-the-app)
@@ -233,7 +233,7 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 
 *[return to table of contents](#table-of-contents)*
 
-## Optional: Deploy to the cloud using Heroku
+## Deploying to the cloud using Heroku
 [Heroku](https://www.heroku.com) is a cloud platform as a service, to which apps built with this bootstrap can be deployed to so that the application can be served in the cloud. 
 
 You will need to sign up for an account on the Heroku website, there is a free tier along with paid options. 
