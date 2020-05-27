@@ -15,12 +15,12 @@ This project is a boilerplate for creating a Node.js/Express API environment tha
     - [Windows and Mac](#windows-and-mac)
     - [Docker tips](#docker-tips)
 5. [Recommended project file and folder structure](#recommended-project-file-and-folder-structure)
-6. [Deploying using Heroku](#deploying-using-heroku)
+6. [Optional: Deploy to the cloud using Heroku](#optional:-deploy-to-the-cloud-using-heroku)
     - [Installing the Heroku CLI](#installing-the-heroku-cli)
     - [Logging in](#logging-in)
     - [Creating the app](#creating-the-app)
     - [Adding a database](#adding-a-database)
-    - [Modifying the boilerplate and scripts](#modifying-the-boilerplate-and-scripts)
+    - [Creating a Procfile and modifying the boilerplate](#creating-a-procfile-and-modifying-the-boilerplate)
 7. [Extra resources](#extra-resources)
     - [Dependency documentation](#dependency-documentation)
     - [Dev dependency documentation](#dev-dependency-documentation)
@@ -233,7 +233,7 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 
 *[return to table of contents](#table-of-contents)*
 
-## Deploying using Heroku
+## Optional: Deploy to the cloud using Heroku
 [Heroku](https://www.heroku.com) is a cloud platform as a service, to which apps built with this bootstrap can be deployed to so that the application can be served in the cloud. 
 
 You will need to sign up for an account on the Heroku website, there is a free tier along with paid options. 
@@ -285,17 +285,17 @@ Database credentials are kept as an environment variable and can be view with:
 heroku config | grep CLEARDB_DATABASE_URL
 ```
 
-### Modifying the boilerplate and scripts
-In the package.json file change the scripts to the following:
+### Creating a Procfile and modifying the boilerplate
+In the project root create a new file named Procfile, this file does not have an extention, so something like Procfile.txt will be invalid.
+
+Once the Procfile has been created, type the following in the file:
 ```
-    "dev": "nodemon -r dotenv/config index.js",
-    "prestart": "node scripts/create-database.js",
-    "start": "node index.js",
-    "pretest": "node scripts/create-database.js test",
-    "test": "NODE_ENV=test nyc --reporter=lcov mocha __tests__/**/*.js --exit --recursive --timeout 60000 --file ./test-setup.js",
-    "posttest": "node scripts/drop-database.js"
-```
-*The "dev" script is the original script, this is left to be swapable with "start" should it be needed, but I can also just be removed. The important part is **"start": "node index.js",***  
+web: node index.js
+``` 
+
+This file tells Heroku to start the app by running the command `node index.js`. 
+
+**If you don't include a Procfile, Heroku will then check and attempt to run the available "start" script in package.json, which means modifying the scripts, using a Procfile requires less modification**
 
 In **/src/app.js** change APP_PORT to the below:
 ```
