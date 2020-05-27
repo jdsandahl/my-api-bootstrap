@@ -275,20 +275,20 @@ git remote -v
 ```
 
 ### Adding a database
-Using the ClearDB add on option that Heroku provides, a database can be added by typing:
+Using the ClearDB add-on option that Heroku provides, a database can be added by typing:
 ```
 heroku addons:create cleardb:ignite
 ```
 
-Database credentials are kept as an environment variable and can be view with:
+Database credentials are kept as an environment variable and can be viewed with:
 ```
 heroku config | grep CLEARDB_DATABASE_URL
 ```
 
 ### Creating a Procfile and modifying the boilerplate
-In the project root create a new file named Procfile, this file does not have an extention, so something like Procfile.txt will be invalid.
+In the project root create a new file named `Procfile`, this file does not have an extention, so something like `Procfile.txt` will be **invalid**.
 
-Once the Procfile has been created, type the following in the file:
+Once the Procfile has been created, type the following and save the file:
 ```
 web: node index.js
 ``` 
