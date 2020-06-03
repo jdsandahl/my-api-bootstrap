@@ -15,7 +15,13 @@ This project is a boilerplate for creating a Node.js/Express API environment tha
     - [Windows and Mac](#windows-and-mac)
     - [Docker tips](#docker-tips)
 5. [Recommended project file and folder structure](#recommended-project-file-and-folder-structure)
-6. [Extra resources](#extra-resources)
+6. [Deploying to the cloud using Heroku](#deploying-to-the-cloud-using-heroku)
+    - [Installing the Heroku CLI](#installing-the-heroku-cli)
+    - [Logging in](#logging-in)
+    - [Creating the app](#creating-the-app)
+    - [Adding a database](#adding-a-database)
+    - [Creating a Procfile and modifying the boilerplate](#creating-a-procfile-and-modifying-the-boilerplate)
+7. [Extra resources](#extra-resources)
     - [Dependency documentation](#dependency-documentation)
     - [Dev dependency documentation](#dev-dependency-documentation)
     - [Miscellaneous](#miscellaneous)
@@ -201,11 +207,12 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 |___ ROOT/
     |--- .env
     |--- .env.test
-    |--- .eslintrc
+    |--- .eslint.json
     |--- .gitignore
     |--- index.js
     |--- package-lock.json
     |--- package.json
+    |--- prettier.config.js
     |--- README.md
 
     |___ __tests__/
@@ -224,6 +231,114 @@ Below is a hypothetical file structure to be used as guideline when putting toge
             |___ index.js 
         |___ routes/
  ```       
+
+*[return to table of contents](#table-of-contents)*
+
+## Deploying to the cloud using Heroku
+[Heroku](https://www.heroku.com) is a cloud platform as a service, to which apps built with this bootstrap can be deployed to so that the application can be served in the cloud. 
+
+You will need to sign up for an account on the Heroku website, there is a free tier along with paid options. 
+
+Once you've created an account, you can begin installing the Heroku command line tool.
+
+### Installing the Heroku CLI
+#### Mac
+To install on a Mac, open a terminal and type the following:
+```
+brew tap heroku/brew && install heroku
+```
+
+#### Ubuntu
+To install on Ubuntu/Linux, from the terminal type:
+```
+sudo snap install --classic heroku
+```
+
+#### Windows
+You can get the installer from [here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+
+### Logging in
+Type the following line, which will prompt you to enter your password for the Heroku account that has been setup:
+```
+heroku login -i
+```
+
+### Creating the app
+From the project root in the terminal type:
+```
+heroku create APP-NAME
+```
+Heroku can also randomly generate a unique name if you don't provide an APP-NAME.
+
+To double check that a Heroku app has been created you view the list of git remotes associated to the project:
+```
+git remote -v
+```
+
+### Adding a database
+Using the ClearDB add-on option that Heroku provides, a database can be added by typing:
+```
+heroku addons:create cleardb:ignite
+```
+
+Database credentials are kept as an environment variable and can be viewed with:
+```
+heroku config | grep CLEARDB_DATABASE_URL
+```
+
+### Creating a Procfile and modifying the boilerplate
+In the project root create a new file named `Procfile`, this file does not have an extention, so something like `Procfile.txt` will be **invalid**.
+
+Once the Procfile has been created, type the following and save the file:
+```
+web: node index.js
+``` 
+
+This file tells Heroku to start the app by running the command `node index.js`. 
+
+**If you don't include a Procfile, Heroku will then check and attempt to run the available "start" script in package.json, which means modifying the scripts, using a Procfile requires less modification**
+
+In **/src/app.js** change APP_PORT to the below:
+```
+const APP_PORT = process.env.PORT || 3000;
+```
+
+In the file /models/index.js change the `const sequelize` code to look like the following:
+```
+const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, CLEARDB_DATABASE_URL } = process.env;
+
+const setupDatabase = () => {
+  const sequelize = CLEARDB_DATABASE_URL ?
+  new Sequelize(CLEARDB_DATABASE_URL) :
+  new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
+    host: DB_HOST,
+    port: DB_PORT,
+    dialect: 'mysql',
+    logging: false,
+  });
+```  
+*Be sure to declare CLEARDB_DATABASE_URL withing the object destructuring of process.env*
+
+### Push and deploy
+Once everything has been setup, the app can be deployed.
+
+**Push any changes to git hub first**
+```
+git push origin
+```
+then,
+
+```
+git push heroku master
+```
+
+Check that everything is running:
+```
+heroku logs -t
+```
+
+Assuming there are no errors, the app is **live!**
+
 
 *[return to table of contents](#table-of-contents)*
 
@@ -249,5 +364,6 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 - [Docker documentation](https://docs.docker.com/)
 - [Postman documentation](https://learning.postman.com/docs/postman/launching-postman/introduction/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+- [Heroku CLI & Dev Center](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
 *[return to table of contents](#table-of-contents)*
