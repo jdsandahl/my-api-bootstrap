@@ -207,11 +207,12 @@ Below is a hypothetical file structure to be used as guideline when putting toge
 |___ ROOT/
     |--- .env
     |--- .env.test
-    |--- .eslintrc
+    |--- .eslint.json
     |--- .gitignore
     |--- index.js
     |--- package-lock.json
     |--- package.json
+    |--- prettier.config.js
     |--- README.md
 
     |___ __tests__/
